@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лучшие IT компании стран СНГ</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="menu"></div>
+
+<nav>
+    <ul>
+        <a href="../../index/html/index.html">Домашняя страница</a>
+        <a href="../../cis_companies/html/cis-companies.html">Лучшие IT компании стран СНГ</a>
+        <a href="../../wrld_companies/html/wrld-companies.html">Лучшие мировые IT компании</a>
+        <a href="../../it_specialists/html/it-specialists.html">Самые популярные категории IT специалистов</a>
+    </ul>
+</nav>
+
+<h1>JavaScript<br>COURSE</h1>
+
+
+
+<section class="JS-VIDEO">
+
+    <iframe width="1000" height="500" src="https://www.youtube.com/embed/IC5vBKc21X8?si=hVBAt6oqYZGxPHMO"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+    </iframe>
+
+
+</section>
+
+<footer>
+    <p>&copy;2023 | @Матвей</p>
+</footer>
+
+<script>
+    var menu = document.querySelector('.menu')
+    var nav = document.querySelector('nav')
+    menu.onclick = function () {
+        menu.classList.toggle('active');
+        nav.classList.toggle('show')
+        document.querySelector("body").classList.toggle('over')
+    }
+</script>
+</body>
+</html>
