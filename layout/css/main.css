@@ -1,0 +1,275 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Noto+Sans+HK:wght@100..900&display=swap');
+
+/* === Основные переменные === */
+:root {
+    --black: #171718;
+    --white: #fff;
+    --gray-light: #f9f9f9;
+    --gray-dark: #333;
+    --accent: gray;
+    --blue-accent: #007BFF;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --padding-section: 60px 0;
+    --margin-section: 30px 0;
+}
+
+/* === Общие стили === */
+html, body {
+    font-family: "Exo 2", sans-serif; /* Изменяем основной шрифт */
+    line-height: 1.6;
+    color: var(--gray-dark);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1200px;
+}
+
+/* === Навигация === */
+.nav {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: "Exo 2", sans-serif;
+    font-size: 24px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.logo-image {
+    margin-right: 10px; 
+    height: 40px; 
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo strong {
+    font-weight: 700;
+}
+
+.logo .subtitle {
+    font-family: "Exo 2", sans-serif;
+    font-size: 12px; 
+    color: var(--accent);
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-list__link {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-list__link:hover {
+    color: var(--accent);
+}
+
+/* .nav-list__link--active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    height: 2px;
+    width: 100%;
+    background-color: var(--accent);
+} */
+
+/* === Блок "О нас" === */
+.about {
+    padding: var(--padding-section);
+    background-color: var(--gray-light);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gray-dark);
+    margin-bottom: var(--margin-section);
+}
+
+.about-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1 1 60%;
+    font-size: 1.1rem;
+    text-align: justify;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: var(--gray-dark);
+}
+
+.about-image {
+    flex: 1 1 40%;
+    text-align: center;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.about-image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Две колонки */
+    grid-template-rows: repeat(2, 1fr);    /* Две строки */
+    gap: 10px; /* Расстояние между фотографиями */
+    width: 100%; /* Занимает всю ширину */
+    max-width: 400px; /* Ограничение максимального размера */
+    margin: 0 auto; /* Центрирование внутри контейнера */
+}
+
+.grid-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Убедитесь, что изображение заполняет квадраты */
+    border-radius: 5px; /* Опционально: закругленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+.about-quote {
+    font-style: italic;
+    padding-left: 20px;
+    border-left: 4px solid var(--blue-accent);
+    color: var(--gray-dark);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.about-footer {
+    margin-top: var(--margin-section);
+    text-align: justify;
+}
+
+.about-signature {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: right;
+    font-style: italic;
+    color: var(--gray-dark);
+}
+
+/* Секция услуг */
+.services {
+    padding: 60px 0;
+    background-color: var(--gray-light);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: var(--gray-dark);
+}
+
+/* Карточка услуги */
+.service-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.service-image {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.service-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.service-content {
+    flex: 1 1 60%;
+}
+
+.service-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--gray-dark);
+    margin-bottom: 15px;
+}
+
+.service-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--gray-dark);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .service-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-image {
+        flex: 1 1 100%;
+    }
+
+    .service-content {
+        flex: 1 1 100%;
+    }
+
+    .about-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text, .about-image {
+        flex: 1 1 100%;
+    }
+}
